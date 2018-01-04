@@ -35,3 +35,19 @@
 	https://hub.docker.com/r/952750120/kubernetes-dashboard-amd64/
 
 
+
+问题：
+
+Q1：docker hub构建失败
+
+	Building in Docker Cloud's infrastructure...
+	Cloning into '.'...
+
+	Dockerfile not found at ./Dockerfile
+
+
+A1：
+
+	将DOCKERFILE重命名为:Dockerfile
+
+
