@@ -49,5 +49,16 @@ Q1：docker hub构建失败
 A1：
 
 	将DOCKERFILE重命名为:Dockerfile
+	需要先将github库中的DOCKERFILE删除掉，再增加，不然不会重命名:Dockerfile,提交成功之后dockerhub会自动构建镜像。
+
+
+Q2：
+
+	Build failed: manifest for gcr.io/google_containers/kubernetes-dashboard-amd64:v1.8.4 not found
+
+
+A2：
+
+	改成gcr.io/google_containers/kubernetes-dashboard-amd64:v1.8.1
 
 
