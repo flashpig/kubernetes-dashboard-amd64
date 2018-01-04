@@ -80,7 +80,11 @@ A3:
 
 	git add -A
 	git commit -am "测试自动构建标签"
-	git tag -a v1.8.1 -m 'kubernetes-dashboard-amd64:v1.8.1' #此标签只是创建tag的，已有tag不需要执行这条命令
+	git tag -a v1.8.1 -m 'kubernetes-dashboard-amd64:v1.8.1'
 	git push origin v1.8.1
+
+删除远程tag标签
+
+	git push origin --delete tag v1.8.1
 
 
