@@ -83,8 +83,47 @@ A3:
 	git tag -a v1.8.1 -m 'kubernetes-dashboard-amd64:v1.8.1'
 	git push origin v1.8.1
 
-删除远程tag标签
+删除远程tag标签,tag标签貌似不能更新代码,所以只能先删除，后重新创建tag了：
 
 	git push origin --delete tag v1.8.1
 
+
+Q4:
+
+	使用标签后，发现不能构建镜像，经过发现，原来是tag匹配不对
+
+
+A4:
+
+
+Type | Name | Dockerfile Location | Docker Tag Name
+-----|------|---------------------|----------------
+Tag | /^[0-9.]+$/ | / |release-{sourceref}
+	     
+
+
+
+
+
+### git tag用法
+
+
+1.列出所有tag
+
+	git tag 
+
+
+2.删除远程tag
+
+	
+	git push origin --delete tag v1.8.1
+
+3.删除本地tag
+
+	git tag -d v1.8.1
+
+4.新建tag
+
+	
+	git tag -a v1.8.1 -m 'kubernetes-dashboard-amd64:v1.8.1'
 
