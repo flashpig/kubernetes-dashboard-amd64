@@ -35,8 +35,13 @@
 	https://hub.docker.com/r/952750120/kubernetes-dashboard-amd64/
 
 
+![image](./images/20180104113229.png)
 
-问题：
+
+
+
+
+### 问题：
 
 Q1：docker hub构建失败
 
@@ -60,5 +65,22 @@ Q2：
 A2：
 
 	改成gcr.io/google_containers/kubernetes-dashboard-amd64:v1.8.1
+
+
+
+Q3:
+
+自动构建的镜像，怎么自动打上tag标签。
+
+A3:
+
+![image](./images/20180104112815.png)
+
+之后提交git用:
+
+	git add -A
+	git commit -am "测试自动构建标签"
+	git tag -a v1.8.1 -m 'kubernetes-dashboard-amd64:v1.8.1'
+	git push origin v1.8.1
 
 
