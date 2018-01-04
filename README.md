@@ -99,6 +99,14 @@ A4:
 Type | Name | Dockerfile Location | Docker Tag Name
 -----|------|---------------------|----------------
 Tag | /^[0-9.]+$/ | / |release-{sourceref}
+
+之前提交给github的tag标签为v.1.8.1发现不能匹配，改成了1.8.1就好了或者直接修改docker hub的name标签为:/^v[0-9.]+$/ 。
+
+
+
+Type | Name | Dockerfile Location | Docker Tag Name
+-----|------|---------------------|----------------
+Tag | /^v[0-9.]+$/ | / |{sourceref}填入进去是空白的，默认就是这个
 	     
 
 
